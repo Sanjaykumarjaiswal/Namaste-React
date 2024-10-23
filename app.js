@@ -1,14 +1,22 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 
-//react element
 
-const heading = React.createElement(
-    "h1",
-    {id:"heading"},
-    "This is Sanjay⭐️"
+const Title=()=>(
+    <h1 className="head">
+        Namaste from jsx
+    </h1>
 )
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
+const HeadingComponent=()=>(
+    <div className="constainer">
+        <Title/>
+        <h1 className="heading">
+            Namaste from functional component
+        </h1>
+    </div>
 
-root.render(heading)
+
+)
+const root=ReactDOM.createRoot(document.getElementById("root"))
+root.render(<HeadingComponent />)
